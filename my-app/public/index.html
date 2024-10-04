@@ -1,10 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Complaint Portal - CITK</title>
+  <header class="header">
+    <div class="top-bar">
+      <span>CITK Ad |</span>
+      <div class="right-icons">
+        <a href="#email" class="email-link">CITK Email</a>
+        <a href="#facebook" class="icon-link">Facebook</a>
+        <a href="#twitter" class="icon-link">Twitter</a>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="logo">
+        <img src="cit.png" alt="CITK Logo" />
+      </div>
+      <div class="title">
+        <h1>Central Institute of Technology Kokrajhar</h1>
+        <p>Deemed to be University under MoE, Govt. of India</p>
+      </div>
+      <div class="g20">
+        <img src="/Asset 2.png" alt="G20 India" />
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Institute</a></li>
+        <li><a href="#">Academic</a></li>
+        <li><a href="#">R&I</a></li>
+        <li><a href="#">Examination</a></li>
+        <li><a href="#">Alumni & ER</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">T&P Cell</a></li>
+        <li><a href="#">ICTCON-2024</a></li>
+        <li><a href="#">Complaint Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
   <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Header Styles */
+    .header {
+      width: 100%;
+    }
+    
+    .top-bar {
+      background-color: #4caf50;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    
+    .right-icons a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    
+    .right-icons a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Main Header */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #f4f4f4;
+    }
+    
+    .logo img {
+      max-width: 80px;
+    }
+    
+    .title {
+      text-align: center;
+    }
+    
+    .title h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    .title p {
+      font-size: 16px;
+      color: #555;
+    }
+    
+    .g20 img {
+      max-width: 56px;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+      background-color: #0056b3;
+    }
+    
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    
+    .navbar ul li {
+      margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+/* Navbar styling */
+.navbar {
+  background-color: #4caf50;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ffeb3b;
+}
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -66,7 +225,7 @@
         <input type="text" id="name" name="name" required />
       </div>
       <div>
-        <label for="email">Email:</label>
+        <label for="email">Institute Email:</label>
         <input type="email" id="email" name="email" required />
       </div>
       <div>
@@ -92,22 +251,19 @@
 
   <script>
     function submitComplaint() {
-      // Get form data
+     
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const category = document.getElementById('category').value;
       const description = document.getElementById('description').value;
 
-      // Check if all fields are filled
       if (!name || !email || !category || !description) {
         alert("Please fill out all fields.");
         return;
       }
 
-      // Display the complaint details (for demo purposes)
       alert(`Complaint Submitted!\n\nName: ${name}\nEmail: ${email}\nCategory: ${category}\nDescription: ${description}`);
 
-      // Clear the form
       document.getElementById('complaintForm').reset();
     }
   </script>
